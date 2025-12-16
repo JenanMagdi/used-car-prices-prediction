@@ -1,0 +1,120 @@
+/* تحسينات عامة */
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* تحسين الحقول */
+.input {
+    @apply border rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue-400 
+    transition-all duration-200 ease-in-out border-slate-300;
+}
+
+.input:focus {
+    @apply border-blue-400 shadow-md shadow-blue-100;
+}
+
+.input:hover {
+    @apply border-slate-400;
+}
+
+/* تحسين القوائم المنسدلة */
+select.input {
+    @apply pr-10 appearance-none bg-no-repeat bg-right-4 bg-center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}
+
+/* تحسين الأزرار */
+.btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 
+    text-white py-3.5 rounded-xl font-bold transition-all duration-300 shadow-md 
+    hover:shadow-lg transform hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+    @apply bg-gradient-to-r from-slate-100 to-slate-200 hover:from-slate-200 hover:to-slate-300 
+    text-slate-700 py-3.5 rounded-xl font-bold transition-all duration-300 border 
+    border-slate-300 hover:border-slate-400;
+}
+
+/* تحسين التصميم العام */
+.card {
+    @apply bg-white rounded-2xl shadow-xl border border-slate-200;
+}
+
+.card-header {
+    @apply bg-gradient-to-r from-slate-800 to-slate-700;
+}
+
+/* تحسين مربع النتيجة */
+.result-card {
+    @apply bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-200 
+    rounded-2xl shadow-lg p-6 transition-all duration-500;
+}
+
+.result-price {
+    @apply text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 
+    bg-clip-text text-transparent;
+}
+
+/* تحسين شريط التحميل */
+.loading-spinner {
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* تحسين أقسام optgroup */
+optgroup {
+    @apply font-bold text-slate-700;
+}
+
+optgroup option {
+    @apply font-normal text-slate-800 pr-4;
+}
+
+/* تحسين الهيدر */
+.header-gradient {
+    background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+}
+
+/* تحسين الفوتر */
+.footer-gradient {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+/* تحسين الصناديق التفاعلية */
+.interactive-box {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* تحسين علامات الاختيار */
+input[type="checkbox"] {
+    @apply w-5 h-5 rounded border-slate-300 text-blue-600 
+    focus:ring-blue-500 focus:ring-offset-0;
+}
+
+/* تحسين المسافات والهوامش */
+.form-section {
+    @apply space-y-6;
+}
+
+/* تحسين الأقسام الفرعية */
+.feature-grid {
+    @apply grid md:grid-cols-3 gap-4;
+}
+
+/* تحسين التنبيهات */
+.alert-info {
+    @apply bg-blue-50 border border-blue-200 text-blue-800 rounded-xl;
+}
+
+.alert-warning {
+    @apply bg-amber-50 border border-amber-200 text-amber-800 rounded-xl;
+}
+
+.alert-error {
+    @apply bg-red-50 border border-red-200 text-red-800 rounded-xl;
+}
